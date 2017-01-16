@@ -3,7 +3,7 @@
 - One simple nodejs project with a `Dockerfile`.
 - One local NPM dependency used by the above project (copied to container via Dockerfile). The project refers to the dependency via a [local path](https://docs.npmjs.com/files/package.json#local-paths).
 - The nodejs project has one web route (`/`) that prints the version of the local npm dependency from its `package.json`.  This is used to verify the results of the test case procedure.
-- docker-compose uses [this volume technique](http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html) to overlay the host machine's source tree
+- [The docker-compose.yml file](https://github.com/twelve17/dc-test/blob/master/docker-compose.yml#L23) uses [this volume technique](http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html) to overlay the host machine's source tree
   on top of the container's source tree and then overlaying the `node_modules` from the container on top of the first volume.
 
 
