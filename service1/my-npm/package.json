@@ -1,0 +1,9 @@
+{
+  "name": "my-npm",
+  "version": "1.0.0",
+  "description": "Test Local NPM Dependency",
+  "main": "index.js",
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true
+}

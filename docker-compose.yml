@@ -1,0 +1,28 @@
+# https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/
+# https://docs.docker.com/compose/rails/
+#
+# https://github.com/docker/compose/issues/2548
+# Share C drive or volume won't work.
+#
+# See the README.md for information on how to use this:
+#
+version: "2"
+
+services:
+  #
+  # service1
+  #
+
+  service1:
+    command: ["npm", "run", "start:dev"]
+    build:
+      context: ./service1
+      dockerfile: Dockerfile
+    volumes:
+      - ./service1:/home/app/service1
+      - /home/app/service1/node_modules
+    ports:
+      - 8000:8000
+    environment:
+      PORT: 8000
+

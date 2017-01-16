@@ -1,0 +1,26 @@
+# Logs
+service1/logs
+service1/*.log
+service1/npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+service1/.grunt
+
+# Dependency directories
+service1/node_modules
+
+service1/my-npm/node_modules
+
+# Optional npm cache directory
+service1/.npm
+
+# Optional REPL history
+service1/.node_repl_history
+
+# vim
+*.swp
